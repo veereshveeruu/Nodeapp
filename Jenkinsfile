@@ -35,7 +35,7 @@ pipeline {
       steps {
         sh """
         docker rm -f testapp || true
-        docker run -d --name testapp -p 8080:80 ${IMAGE_NAME}:${TAG}
+        docker run -d --name testapp -p 8081:80 ${IMAGE_NAME}:${TAG}
         """
       }
     }
